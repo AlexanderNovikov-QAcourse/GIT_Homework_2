@@ -1,0 +1,84 @@
+GitHub. HW_2
+
+git clone git@github.com:AlexanderNovikov-QAcourse/GIT_Homework_2.git
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bug_Reports
+git branch SQL
+git branch Charles
+git branch Mobile_Testing
+
+
+2. Запушить все ветки на внешний репозиторий
+git push --all origin
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+git checkout Bug_Reports
+cat > bug_report_template.txt
+1. ID:
+2. Summary:
+3. Description:
+4. Steps to reproduce:
+5. Severity:
+6. Priority:
+7. Reproducible:
+8. Symptom:
+9. Workaround:
+10. Attachments:
+11. Status:
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git add bug_report_template.txt
+git commit -m "Add bug_report_template.txt"
+git push --set-upstream origin Bug_Reports 
+
+5. Вмержить ветку Bag Reports в Main
+git checkout main
+git merge Bug_reports -m "Bug_Reports merged"
+
+6. Запушить main на внешний репозиторий.
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout CheckLists
+cat > check_list_template.txt
+1. Check the UI of ...
+1.1.
+1.2.
+1.3.
+...
+
+2. Check the functionality of...
+2.1.
+2.2.
+2.3.
+...
+
+3. Check the functionality of...
+3.1.
+3.2.
+3.3.
+...
+
+8. Запушить структуру на внешний репозиторий
+git add check_list_template.txt
+git commit -m "check_list_template.txt added"
+git push --set-upstream origin CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git checkout main
+git pull
